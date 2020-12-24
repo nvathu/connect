@@ -9,7 +9,7 @@ def send_sensor_reading():
 
 
 @sio.event
-def connect(namespace= '/printer-queue'):
+def connect(namespace= '/restaurant'):
     sio.start_background_task(send_sensor_reading)
     print('connection established')
     print('my sid is', sio.sid)
@@ -20,4 +20,4 @@ def connect(namespace= '/printer-queue'):
 def disconnect():
     print('disconnected from server')
 
-sio.connect('http://localhost:5000', namespaces = ['/printer-queue'])
+sio.connect('https://falcon.fl.office.com:5000', namespaces = ['/restaurant'])
