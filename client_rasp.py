@@ -20,4 +20,4 @@ def connect(namespace= '/restaurant'):
 def disconnect():
     print('disconnected from server')
 
-sio.connect('https://falcon.fl.office.com:5000', namespaces = ['/restaurant'])
+sio.connect('https://192.168.11.204:5000', namespaces = ['/restaurant'])
