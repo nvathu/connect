@@ -24,7 +24,7 @@ def connect(namespace=queue):
 def disconnect():
     print('disconnected from server')
 
-sio.connect('http://localhost:5000', headers={'tenantId':'1'},namespaces = ['/printer-queue'] )
+sio.connect('http://192.168.11.204:5000', headers={'tenantId':'1'},namespaces = ['/printer-queue'] )
 
 
 print("abc")

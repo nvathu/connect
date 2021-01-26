@@ -1,4 +1,10 @@
 import socketio
+import pika
+
+connection = pika.BlockingConnection(pika.ConnectionParameters('https://falcon.fl.office.com'))
+channel = connection.channel()
+channel.queue_declare(queue='print-notification')
+
 
 sio = socketio.Client()
 
