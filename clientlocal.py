@@ -1,4 +1,4 @@
-#raspberry run
+#raspberry run remember to turn off firewall
 import socketio
 
 queue = '/printer-queue'
